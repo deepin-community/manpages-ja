@@ -1,0 +1,317 @@
+From 02f35eacd60acc118874cdb4b170a2dc0feff2c1 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Mon, 8 Jul 2013 07:58:25 +0900
+Subject: [PATCH 6/9] Update less.1 for debian
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_less/man1/less.1 |  208 ++-----------------------------------------
+ 1 file changed, 9 insertions(+), 199 deletions(-)
+
+diff --git a/manual/GNU_less/man1/less.1 b/manual/GNU_less/man1/less.1
+index 64fcbcc..55396cd 100644
+--- a/manual/GNU_less/man1/less.1
++++ b/manual/GNU_less/man1/less.1
+@@ -34,13 +34,11 @@ less \- more の反対 (more のようなページャー)
+ .br
+ .B "less --version"
+ .br
+-.B "less [-[+]aBcCdeEfgGiImMnNqQrsSuUVWwXZ]"
++.B "less [-[+]aBcCdeEfgGiImMnNqQrsSuUVWwX]"
+ .br
+ .B "     [-b \fIbufs\fP] [-h \fIlines\fP] [-j \fIline\fP] [-k \fIkeyfile\fP]"
+ .br
+-.B "     [-K \fIcharacter set\fP] [-{oO} \fIlogfile\fP]"
+-.br
+-.B "     [-p \fIpattern\fP] [-P \fIprompt\fP] [-t \fItag\fP]"
++.B "     [-{oO} \fIlogfile\fP]" [-p \fIpattern\fP] [-P \fIprompt\fP] [-t \fItag\fP]"
+ .br
+ .B "     [-T \fItagsfile\fP] [-x \fItab\fP] [-y \fIlines\fP] [-[z] \fIlines\fP]"
+ .br
+@@ -302,12 +300,6 @@ N は 0 から 100 の間でなければならない。
+ 表示中の最終行の行番号・バイトオフセットといった情報を表示する。
+ 可能な場合には、ファイルの長さ・ファイルの行数・
+ 表示されている最終行までのパーセントも表示する。
+-.IP "@"
+-現在のファイルについて、コード認識法を順番に変更する。
+-拡張した
+-.I less
+-には、(環境変数 JLESSCHARSET で選ばれる) デフォルト, japanese, ujis, sjis,
+-iso8, noconv, none という 7 種類のコード認識法がある。
+ .IP \-
+ コマンドラインオプション文字 (下記のオプションを参照) のうちの 1 つを
+ 続けて入力することで、
+@@ -411,7 +403,7 @@ MS-DOS と OS/2 では、シェルは通常のコマンドプロセッサであ
+ それ以降の文字は大文字でも小文字でも構わない。
+ 例えば、--Quit-at-eof は --QUIT-AT-EOF と等しい。
+ .PP
+-環境変数 "LESS" と "JLESS" の値もオプションとして使われる。
++環境変数 "LESS" の値もオプションとして使われる。
+ 例えば、
+ .I less
+ を起動するたびに "less -options ..." とタイプするのを避けるために、
+@@ -431,8 +423,8 @@ MS-DOS では、クォーテーションは必要ないが、オプション文
+ パーセント記号を 2 つのパーセント記号に置き換える必要がある。
+ .sp
+ 環境変数はコマンドラインより先に解析されているので、
+-コマンドラインオプションは環境変数 LESS および JLESS を上書きする。
+-もし、あるオプションが環境変数 LESS または JLESS にあっても、
++コマンドラインオプションは環境変数 LESS を上書きする。
++もし、あるオプションが環境変数 LESS にあっても、
+ コマンドラインオプション "\-+" で起動すれば、
+ そのオプションをデフォルトの値にリセットすることができる。
+ .sp
+@@ -567,10 +559,6 @@ lesskey ファイルが標準位置 (「キー割り当て」セクションを
+ 見つかった場合、それも
+ .I lesskey
+ ファイルとして使われる。
+-.IP -K\fIcharset\fP
+-.I less
+-に、環境変数 JLESSCHARSET もしくは LESSCHARSET で定義されている
+-文字セットの代わりとして、指定した文字セットを使わせる。
+ .IP "-m または --long-prompt"
+ .I less
+ に、(\fImore\fP のように) 詳細なパーセント表示のプロンプトを出させる。
+@@ -625,8 +613,8 @@ v コマンドで現在の行番号がエディタに渡される」というこ
+ このオプションは通常、
+ .I less
+ コマンドを呼び出すたびに打ち込んだりせずに、
+-環境変数 LESS および JLESS で指定する。
+-そのようなオプションは、環境変数 LESS および JLESS の中で
++環境変数 LESS で指定する。
++そのようなオプションは、環境変数 LESS の中で
+ 最後のオプションになっているか、
+ もしくは、ダラー記号で終了していなければならない。
+ -Ps の後に文字列を続けるオプションは、デフォルトの (短い) プロンプトを
+@@ -760,10 +748,6 @@ z は、
+ ウインドウを 20 行に設定することを意味している。
+ さらに、画面サイズが 40 行に変更された場合には、
+ 自動的にスクロールウインドウは 36 行に変更される。
+-.IP -Z
+-環境変数 JLESSCHARSET で "japanese" が選択されている場合、
+-UJIS よりも SJIS の優先度を高くする。
+-デフォルトでは、SJIS よりも UJIS の優先度が高い。
+ .IP -"\fIcc\fP\ or\ --quotes=\fIcc\fP
+ ファイル名を引用する文字を変更する。
+ このオプションは、スペースとダブルクォーテーションマークの両方を含む名前を
+@@ -1051,14 +1035,7 @@ LESSOPEN="| lesspipe.sh %s" と設定する。
+ .PP
+ 「文字セット」とは、簡潔にいうと、どの文字がノーマル文字・制御文字・バイナリ
+ 文字とされるか、ということである。
+-環境変数 JLESSCHARSET と LESSCHARSET が文字セットを選択するのに使われる。
+-.I less
+-のプログラム中で、この 2 つの環境変数に違いはないが、
+-環境変数 JLESSCHARSET を使うことを勧める。
+-なぜなら、環境変数 LESSCHARSET に拡張文字セットを設定していると、
+-拡張文字セットの使えない
+-.I less
+-がエラーを起こすからである。
++環境変数 LESSCHARSET が文字セットを選択するのに使われる。
+ この環境変数に設定できる値を以下に示す。
+ .IP ascii
+ BS, TAB, NL, CR, formfeed が制御文字である。
+@@ -1079,149 +1056,6 @@ NeXT 計算機用の文字セットを選択する。
+ .IP utf-8
+ ISO 10646 文字セットの UTF-8 エンコーディングを選択する。
+ .PP
+-JLESSCHARSET にのみ設定可能な値を以下に示す。
+-.IP iso7
+-7 ビットを仮定した ISO 2022 コード拡張による複数文字セット。
+-128 から 225 の値を持つ文字がバイナリとして扱われる。
+-.I less
+-の実装レベルは、ISO 2022 の level 3 である。
+-.IP iso8
+-8 ビットを仮定した ISO 2022 コード拡張による複数文字セット。
+-.I less
+-の実装レベルは、ISO 2022 の level 3 である。
+-.IP jis
+-7 ビットを仮定した ISO 2022 コード拡張による日本語文字セットのみ。
+-.IP ujis
+-文字が 32 から 127 の値を持つ場合、ASCII 文字列を仮定する。
+-文字が 162 から 254 の値を持つ場合、JISX 0208 文字セット・
+-JISX 0201 文字セットの右半分・UJIS コーディングをした
+-JISX 0212 文字セットを仮定する。
+-それ以外の文字はバイナリとして扱われる。
+-.IP euc
+-ujis と同じ。
+-.IP sjis
+-文字が 32 から 127 の値を持つ場合、ASCII 文字列を仮定する。
+-文字が 128 から 252 の値を持つ場合、
+-JISX 0208 文字セットと JISX 0201 文字セットの右半分を仮定する。
+-それ以外の文字はバイナリとして扱われる。
+-.IP japanese
+-入力は全ての日本語文字セット、jis, ujis, sjis を仮定する。
+-.I less
+-は jis のみを出力する。
+-.PP
+-日本語には、いくつかのコードセット (文字セットではない) が存在する。
+-よって、
+-.I less
+-は、それを正しく表示するためにコードセット間の変換をしなければならない。
+-変換をさせるために設定できる JLESSCHARSET の値を以下に示す。
+-.IP ujis-iso7
+-入力は ujis と iso7 を仮定する。
+-.I less
+-は iso7 のみを出力する。
+-.IP euc-iso7
+-ujis-iso7 と同じ。
+-.IP sjis-iso7
+-入力は sjis と iso7 を仮定する。
+-.I less
+-は iso7 のみを出力する。
+-.IP ujis-jis
+-入力は ujis と jis を仮定する。
+-.I less
+-は jis のみを出力する。
+-.IP euc-jis
+-ujis-jis と同じ。
+-.IP sjis-jis
+-入力は sjis と jis を仮定する。
+-.I less
+-は jis のみを出力する。
+-.IP jis-ujis
+-入力は jis と ujis を仮定する。
+-.I less
+-は ujis のみを出力する。
+-.IP jis-euc
+-jis-ujis と同じ。
+-.IP jis-sjis
+-入力は jis と sjis を仮定する。
+-.I less
+-は sjis のみを出力する。
+-.IP japanese-iso7
+-入力は japanese と iso7 を仮定する。
+-.I less
+-は iso7 のみを出力する。
+-.IP japanese-jis
+-入力は japanese を仮定する。
+-.I less
+-は jis のみを出力する。
+-japanese と同じ。
+-.IP japanese-ujis
+-入力は japanese を仮定する。
+-.I less
+-は ujis のみを出力する。
+-.IP japanese-euc
+-japanese-ujis と同じ。
+-.IP japanese-sjis
+-入力は japanese を仮定する。
+-.I less
+-は sjis のみを出力する。
+-.IP ujis-sjis
+-入力は ujis を仮定する。
+-.I less
+-は sjis のみを出力する。
+-.IP euc-sjis
+-ujis-sjis と同じ。
+-.IP sjis-ujis
+-入力は sjis を仮定する。
+-.I less
+-は ujis のみを出力する。
+-.IP sjis-euc
+-sjis-ujis と同じ。
+-.PP
+-文字セットを設定するもう一つ方法は、環境変数 LANG を使うことである。
+-"ja_JP" または、"japan" で始まる環境変数 LANG であるとき、
+-.I less
+-は、全ての日本語コード文字を日本語文字セットとして読み、
+-環境変数 LANG の残りの部分で出力のコーディングを指定する。
+-.PP
+-ISO 2022 コード拡張テクニックでは、多くの文字セットを
+-簡単に表示させるために4つのプレーンを定義している。
+-環境変数 JLESSPLANESET によりデフォルトのプレーンを設定する。
+-環境変数 JLESSPLANESET が、"japanese", "ujis", "euc" のとき、
+-.I less
+-は、g1 プレーンを JISX 0208、g2 プレーンを JISX 0201 の右半分、
+-g3 プレーンを JISX 0212 として扱う。
+-環境変数 JLESSPLANESET が、"latin1", "latin2", "latin3", "latin4",
+-"greek", "alabic", "hebrew", "cyrillic", "latin5" のとき、
+-.I less 
+-は、g1 プレーンを ISO 8859 の一つとして扱う。
+-それ以外の場合、
+-.I less 
+-は、環境変数 JLESSPLANESET を
+-設定のための実際のエスケープシーケンスとして解析しようと試みる。
+-解析の際、JLESSPLANESET における "\\e" はエスケープコードとして扱われる。
+-.PP
+-.I less
+-は、ISO 2022 コード拡張テクニックに含まれる文字セットの
+-ほとんど全てのエスケープシーケンスを理解する。
+-文字セットを選択するためのエスケープシーケンスは多数存在する。
+-一方で、
+-.I less
+-は、文字列セットを選択するために、
+-'^[(', '^[-', '^[$(', '^[$-', '^N', '^O' という、
+-6 つのエスケープシーケンスしか出力しない。
+-これは、
+-.I less
+-が端末と端末エミュレーターにとって使いやすいということである。
+-.PP
+-キーボード入力のための特別な「文字セット」もある。
+-環境変数 JLESSKEYCHARSET は、この文字セットを設定するために使われる。
+-JLESSKEYCHARSET が持つことのできる値は、環境変数 JLESSCHARSET 
+-と同じである。
+-.PP
+-LESSCHARSET 環境変数が設定されていない場合、
+-デフォルトの文字セットは latin1 である。
+-しかし、環境変数 LC_ALL, LC_CTYPE, LANG のいずれかに
+-"UTF-8" という文字列がある場合、デフォルトの文字セットは utf-8 になる。
+-.PP
+ 特殊なケースとして、
+ LESSCHARSET で指定できる限定された文字セットではなく、
+ 他の文字セットを使うように
+@@ -1312,7 +1146,7 @@ b の後には、(\fIX\fP で示される) 1 文字が続き、どの行のバ
+ .IP "%E"
+ エディタの名前 (環境変数 VISUAL、VISUAL が定義されていないときは
+ 環境変数 EDITOR) に置き換えられる。
+-以降の、JLESSEDIT の特徴に関する話題を参照。
++以降の、LESSEDIT の特徴に関する話題を参照。
+ .IP "%f"
+ 現在の入力ファイル名に置き換えられる。
+ .IP "%i"
+@@ -1516,23 +1350,14 @@ less をいつも「安全な」モードでしか実行できないように
+ .IP LESS
+ .I less
+ に自動的に渡されるオプション。
+-.IP JLESS
+-環境変数 LESS と同じ。
+ .IP LESSANSIENDCHARS
+ ANSI カラーシーケンスの終りとして使われる文字 (デフォルトは "m")。
+ .IP LESSBINFMT
+ 印字可能文字でもなく、制御文字でもない文字を表示する際のフォーマット。
+ .IP LESSCHARDEF
+ 文字セットを定義する。
+-.IP JLESSCHARSET
+-あらかじめ定義された文字セットを選択する。
+ .IP LESSCHARSET
+-JLESSCHARSET が定義されていない場合に、
+ あらかじめ定義された文字セットを選択する。
+-.IP JLESSKEYCHARSET
+-キーボート入力のためのあらかじめ定義された文字セットを選択する。
+-.IP JLESSPLANESET
+-あらかじめ定義された ISO 2022 コード拡張テクニックのプレーンセットを選択する。
+ .IP LESSCLOSE
+ (オプションの) 入力ポストプロセッサを呼び出すためのコマンドライン。
+ .IP LESSECHO
+@@ -1637,18 +1462,3 @@ See the GNU General Public License for more details.
+ Mark Nudelman <marknu@flash.net>
+ .br
+ バグの報告やコメントは、上のアドレスか bug-less@gnu.org へ送って下さい。
+-
+-.SH パッチ
+-Copyright (c) 1994-2000  Kazushi (Jam) Marukawa, Japanized routines only
+-.br
+-Comments about this part to: jam@pobox.com
+-.br
+-You may distribute under the terms of the Less License.
+-.PP
+-[参考訳]
+-.br
+-Copyright (c) 1994-2000  Kazushi (Jam) Marukawa, 日本語化ルーチンのみ。
+-.br
+-この部分に関するコメントは jam@pobox.com へ送って下さい。
+-.br
+-このパッチは Less ライセンスの下で配布できる。
+-- 
+1.7.10.4
+

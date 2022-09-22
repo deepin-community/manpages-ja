@@ -1,0 +1,35 @@
+From 81727f7dcd9d3706d6db61c8dd01fe63ef8f2f42 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:17:38 +0900
+Subject: [PATCH 1/7] Fix section of locate.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_findutils/man1/locate.1 | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/manual/GNU_findutils/man1/locate.1 b/manual/GNU_findutils/man1/locate.1
+index 3f4c0d7..0179687 100644
+--- a/manual/GNU_findutils/man1/locate.1
++++ b/manual/GNU_findutils/man1/locate.1
+@@ -20,7 +20,7 @@
+ .\" Japanese Version Copyright (c) 1997 NAKANO Takeo all rights reserved.
+ .\" Translated Thu May 11 1997 by NAKANO Takeo <nakano@apm.seikei.ac.jp>
+ .\"
+-.TH LOCATE 1L \" -*- nroff -*-
++.TH LOCATE 1 \" -*- nroff -*-
+ .SH 名前
+ locate \- ファイル名データベースからパターンに合うものを表示する
+ .SH 書式
+@@ -60,7 +60,7 @@ locate \- ファイル名データベースからパターンに合うものを
+ システムに存在していたファイルのリストからなっている。
+ システム管理者はデフォルトで用いるデータベースのファイル名や更新の頻度、
+ またどのディレクトリの情報をデータベースに入れるかなどを選択することができる。
+-.BR updatedb (1L)
++.BR updatedb (1)
+ を見よ。
+ .SH オプション
+ .TP
+-- 
+1.8.3.2
+

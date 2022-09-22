@@ -1,0 +1,26 @@
+From b700120c76ee152258d9a19a297d380886a8cd03 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:01:15 +0900
+Subject: [PATCH 21/25] Fix section of whoami.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/whoami.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/whoami.1 b/manual/GNU_sh-utils/man1/whoami.1
+index 560d3e7..921608b 100644
+--- a/manual/GNU_sh-utils/man1/whoami.1
++++ b/manual/GNU_sh-utils/man1/whoami.1
+@@ -20,7 +20,7 @@
+ .\"         all rights reserved.
+ .\" Translated Sun Jun 22 10:04:17 JST 1997
+ .\"         by CHIDA Kazunori <chida@mondo.mech.muroran-it.ac.jp>  
+-.TH WHOAMI 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH WHOAMI 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ whoami \- 有効なユーザIDを表示する
+ .SH 書式
+-- 
+1.8.3.2
+

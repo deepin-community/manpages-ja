@@ -1,0 +1,26 @@
+From 46496d3e6b7da216af46d5942bdcce8a96fdb864 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:56:36 +0900
+Subject: [PATCH 02/25] Fix section of mt.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_cpio/man1/mt.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_cpio/man1/mt.1 b/manual/GNU_cpio/man1/mt.1
+index 1c36663..cef6eba 100644
+--- a/manual/GNU_cpio/man1/mt.1
++++ b/manual/GNU_cpio/man1/mt.1
+@@ -11,7 +11,7 @@
+ .\" Translated 2000-06-06, Yuichi SATO <sato@complex.eng.hokudai.ac.jp>
+ .\" Updated 2012-06-02, Akihiro MOTOKI <amotoki@gmail.com>
+ .\"
+-.TH MT 1L   
++.TH MT 1   
+ .SH 名前
+ mt \- 磁気テープドライブの操作を制御する
+ .SH 書式
+-- 
+1.8.3.2
+

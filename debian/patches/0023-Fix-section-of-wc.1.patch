@@ -1,0 +1,26 @@
+From 0e5e8b8b6c775ff27fca10872fb8bc22cb023774 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:01:45 +0900
+Subject: [PATCH 23/25] Fix section of wc.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_textutils/man1/wc.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_textutils/man1/wc.1 b/manual/GNU_textutils/man1/wc.1
+index 81784d1..f0468c3 100644
+--- a/manual/GNU_textutils/man1/wc.1
++++ b/manual/GNU_textutils/man1/wc.1
+@@ -2,7 +2,7 @@
+ .\"         all rights reserved.
+ .\" Translated Tue Jan 21 19:01:39 JST 1997
+ .\"         by FURUSAWA,Kazuhisa <furusawa@com.cs.osakafu-u.ac.jp>
+-.TH WC 1L "GNU Text Utilities" "FSF" \" -*- nroff -*-
++.TH WC 1 "GNU Text Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ wc \- ファイル中のバイト数、単語数、行数を出力
+ .SH 書式
+-- 
+1.8.3.2
+

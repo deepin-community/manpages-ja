@@ -1,0 +1,26 @@
+From 25a42fc428af727903ffdf55fe62a25bf06dfc75 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:59:26 +0900
+Subject: [PATCH 13/25] Fix section of true.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/true.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/true.1 b/manual/GNU_sh-utils/man1/true.1
+index aecd710..59436dc 100644
+--- a/manual/GNU_sh-utils/man1/true.1
++++ b/manual/GNU_sh-utils/man1/true.1
+@@ -4,7 +4,7 @@
+ .\" Translated Sun Feb  9 15:14:51 JST 1997
+ .\"         by SHINDO Shuro <shu@linux.or.jp>
+ .\"
+-.TH TRUE 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH TRUE 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ true \- 無動作，正常終了
+ .SH 書式
+-- 
+1.8.3.2
+

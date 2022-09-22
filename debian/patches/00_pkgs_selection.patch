@@ -1,0 +1,133 @@
+Description: Select packages for Debian.
+
+ (manpages from shadow)
+ + Exclude shadow (either overlapped with login & passwd packages or ancient).
+
+ (manpages from propcs)
+ + Set procps superior to util-linux.
+ + (kill.1, uptime.1 from procps)
+   Set procps superior to coreutils.
+
+ + (hostname.1 from hostname)
+   Set net-tools (similar documentation) superior to coreutils.
+
+ (manpages from sysvinit)
+ + Set sysvinit inferior to util-linux (binaries switched in stretch).
+
+ + (tailf.1 from util-linux)
+   Set apmd inferior to util-linux.
+ + (write.1 from util-linux)
+   Set netkit inferior to util-linux.
+
+ + (ld.so.8, ldconfig.8, ldd.1 from eglibc)
+   Leave ld.so (removed from etch).
+
+ (manpages from man-db)
+ + Exclude man (not in Debian).
+ + Keep man-db excluded (overlapped with man-db package).
+
+ (manpage from cdparanoia)
+ + Exclude cdparanoia (overlapped with cdparanoia package).
+
+ (nfs)
+ + (rquotad.8 from quota)
+   Set quota superior to nfs-utils.
+ + Set nfs-utils superior to nfs-server (removed from squeeze).
+
+ (pcmcia)
+ + Exclude pcmcia-cs (removed from lenny).
+
+ (manpages from rpm)
+ + Exclude rpm (overlapped with rpm package).
+
+ (ftp)
+ + (ftpd.8 from ftp-server's)
+   Set netkit superior to wu-ftpd (removed from wheezy).
+
+Author: YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>
+Forwarded: not-needed
+Last-Update: 2021-01-31
+
+Index: manpages-ja/script/pkgs.list
+===================================================================
+--- manpages-ja.orig/script/pkgs.list
++++ manpages-ja/script/pkgs.list
+@@ -6,7 +6,9 @@
+ # 上に書いたパッケージが、重複ページの選択時にも上に来る
+ # (i.e. 優先される) ことになります。
+ #
+-shadow		Y
++shadow		N
++procps		Y
++net-tools	Y
+ GNU_coreutils	Y
+ gnumaniak	Y
+ GNU_bash	Y
+@@ -37,9 +39,7 @@ GNU_texinfo	Y
+ GNU_textutils	N
+ GNU_uucp	Y
+ LDP_man-pages	Y
+-SysVinit	Y
+ acl		Y
+-apmd		Y
+ at		Y
+ autofs		Y
+ bind		Y
+@@ -48,7 +48,7 @@ bsd-games	Y
+ bsd-games-non-free	Y
+ byacc		Y
+ bzip2		Y
+-cdparanoia	Y
++cdparanoia	N
+ cdrecord	Y
+ cron		Y
+ cups		Y
+@@ -81,7 +81,7 @@ linux-man9	Y
+ logrotate	Y
+ lpr-linux	Y
+ majordomo	Y
+-man		Y
++man		N
+ man-db		N
+ microcode_ctl	Y
+ mirrordir	Y
+@@ -90,23 +90,20 @@ modutils	N
+ mpg123		Y
+ ncftp		Y
+ ncurses		Y
+-net-tools	Y
+ netatalk	Y
+-netkit		Y
+-nfs-server	Y
++quota		Y
+ nfs-utils	Y
++nfs-server	Y
+ pciutils	Y
+-pcmcia-cs	Y
++pcmcia-cs	N
+ ppp		Y
+ procinfo	Y
+ procmail	Y
+-procps		Y
+ psmisc		Y
+-quota		Y
+ rdate		Y
+ reiserfsprogs	Y
+ rp-pppoe	Y
+-rpm		Y
++rpm		N
+ rssh		Y
+ rsync		Y
+ sendmail	Y
+@@ -119,8 +116,11 @@ tcpdump		Y
+ tcsh		Y
+ ucd-snmp	Y
+ util-linux	Y
++SysVinit	Y
++apmd		Y
+ uudeview	Y
+ vsftpd		Y
++netkit		Y
+ wu-ftpd		Y
+ xinetd		Y
+ yp-tools	Y

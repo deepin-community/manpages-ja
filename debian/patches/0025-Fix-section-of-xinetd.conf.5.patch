@@ -1,0 +1,26 @@
+From b3bd485a4d486f3133b1dc1185417ed4d89f6650 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:02:36 +0900
+Subject: [PATCH 25/25] Fix section of xinetd.conf.5
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/xinetd/man5/xinetd.conf.5 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/xinetd/man5/xinetd.conf.5 b/manual/xinetd/man5/xinetd.conf.5
+index 1fb3a10..c929067 100644
+--- a/manual/xinetd/man5/xinetd.conf.5
++++ b/manual/xinetd/man5/xinetd.conf.5
+@@ -1187,7 +1187,7 @@ service unlisted
+ .PD
+ .\" *********************** SEE ALSO ****************************
+ .SH 関連項目
+-.I "xinetd(1L),"
++.I "xinetd(1),"
+ .LP
+ .I "xinetd.log(5)"
+ .LP
+-- 
+1.8.3.2
+

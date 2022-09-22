@@ -1,0 +1,26 @@
+From b6ddfaec689d4f078fdd6d56604f7c0ed7d1b340 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:58:23 +0900
+Subject: [PATCH 09/25] Fix section of dirname.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/dirname.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/dirname.1 b/manual/GNU_sh-utils/man1/dirname.1
+index b411bdd..5aca011 100644
+--- a/manual/GNU_sh-utils/man1/dirname.1
++++ b/manual/GNU_sh-utils/man1/dirname.1
+@@ -22,7 +22,7 @@
+ .\"         all rights reserved.
+ .\" Translated Sun Jun 22 10:04:17 JST 1997
+ .\"         by CHIDA Kazunori <chida@mondo.mech.muroran-it.ac.jp>  
+-.TH DIRNAME 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH DIRNAME 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ dirname \- パス名からファイル名を切り出す
+ .SH 書式
+-- 
+1.8.3.2
+

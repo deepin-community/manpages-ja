@@ -1,0 +1,43 @@
+Source: manpages-ja
+Section: doc
+Priority: optional
+Maintainer: YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>
+Uploaders: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.1
+Homepage: https://linuxjm.osdn.jp/
+Vcs-Git: https://salsa.debian.org/debian/manpages-ja.git
+Vcs-Browser: https://salsa.debian.org/debian/manpages-ja
+
+Package: manpages-ja
+Architecture: all
+Multi-Arch: foreign
+Section: doc
+Depends: ${misc:Depends}
+Suggests: man-browser
+Description: Japanese version of the manual pages (for users)
+ This package contains the Linux manual pages translated into
+ Japanese.
+ .
+ For more information, see JM project's web page:
+ .
+     https://linuxjm.osdn.jp/
+
+Package: manpages-ja-dev
+Architecture: all
+Multi-Arch: foreign
+Section: doc
+Depends: ${misc:Depends}
+Suggests: man-browser, manpages-ja
+Conflicts: manpages-ja (<< 0.4.0.0.20000615-2)
+Description: Japanese version of the manual pages (for developers)
+ This package contains the Linux manual pages translated into
+ Japanese. Following sections are provided:
+   * 2 = Linux system calls.
+   * 3 = Libc calls (note that a more comprehensive source of
+ information may be found in the libc6-doc package).
+ .
+ For more information, see JM project's web page:
+ .
+     https://linuxjm.osdn.jp/
+

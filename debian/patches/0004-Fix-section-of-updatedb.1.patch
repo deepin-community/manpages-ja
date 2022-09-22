@@ -1,0 +1,50 @@
+From 868b56532824e1d844d4cf9db2802236641b2302 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:56:58 +0900
+Subject: [PATCH 04/25] Fix section of updatedb.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_findutils/man1/updatedb.1 | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/manual/GNU_findutils/man1/updatedb.1 b/manual/GNU_findutils/man1/updatedb.1
+index 29968aa..48eab1d 100644
+--- a/manual/GNU_findutils/man1/updatedb.1
++++ b/manual/GNU_findutils/man1/updatedb.1
+@@ -20,7 +20,7 @@
+ .\" Japanese Version Copyright (c) 1997 NAKANO Takeo all rights reserved.
+ .\" Translated Thu May 11 1997 by NAKANO Takeo <nakano@apm.seikei.ac.jp>
+ .\"
+-.TH UPDATEDB 1L \" -*- nroff -*-
++.TH UPDATEDB 1 \" -*- nroff -*-
+ .SH 名前
+ updatedb \- ファイル名データベースを更新する
+ .SH 書式
+@@ -51,7 +51,7 @@ updatedb \- ファイル名データベースを更新する
+ ネットワークの余分なトラフィックを防ぐことができる。
+ ユーザーは \fBlocate\fP に検索させるデータベースを
+ 環境変数やコマンドラインから指定できる
+-.RB ( locate (1L)
++.RB ( locate (1)
+ を見よ)。
+ データベースを結合することはできない。
+ .PP
+@@ -104,10 +104,10 @@ updatedb \- ファイル名データベースを更新する
+ .B updatedb
+ のオプションに関するまとめを表示して終了する。
+ .SH 関連項目
+-.BR find (1L),
+-.BR locate (1L),
+-.BR locatedb (5L),
+-.BR xargs (1L)
++.BR find (1),
++.BR locate (1),
++.BR locatedb (5),
++.BR xargs (1)
+ .br
+ .B Finding Files
+ (on-line in Info, or printed)
+-- 
+1.8.3.2
+

@@ -1,0 +1,11 @@
+manpages-ja source package infomation
+
+- Remove source code
+  The deleted source code is the following file.
+    * manual/procps/man1/top.1
+
+  This file is licensed under GFDL with invariant section or front-cover or
+  back-cover text.
+
+-- Nobuhiro Iwamatsu <iwamatsu@debian.org> Sun, 14 Jul 22:10:06 2013 +0900
+

@@ -1,0 +1,26 @@
+From b797473aa9b0ab33a1f9637294553f0be76d7c7e Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:58:09 +0900
+Subject: [PATCH 08/25] Fix section of chroot.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/chroot.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/chroot.1 b/manual/GNU_sh-utils/man1/chroot.1
+index 7e89ec0..4676f59 100644
+--- a/manual/GNU_sh-utils/man1/chroot.1
++++ b/manual/GNU_sh-utils/man1/chroot.1
+@@ -19,7 +19,7 @@
+ .\" Japanese Version Copyright (c) 1997 NAKANO Takeo all rights reserved.
+ .\" Translated Wed Dec 31 1997 by NAKANO Takeo <nakano@apm.seikei.ac.jp>
+ .\"
+-.TH CHROOT 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH CHROOT 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ chroot \- ルートディレクトリを設定して、コマンドまたは対話型シェルを実行する
+ .SH 書式
+-- 
+1.8.3.2
+

@@ -1,0 +1,26 @@
+From afa20c23600b5440af349e57d5426db8eef65062 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:57:32 +0900
+Subject: [PATCH 06/25] Fix section of indent.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_indent/man1/indent.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_indent/man1/indent.1 b/manual/GNU_indent/man1/indent.1
+index cfb2d84..42f640e 100644
+--- a/manual/GNU_indent/man1/indent.1
++++ b/manual/GNU_indent/man1/indent.1
+@@ -8,7 +8,7 @@
+ .\" Updated & Modified Mon May  3 07:00:19 JST 2004
+ .\"         by Yuichi SATO <ysato444@yahoo.co.jp>
+ .\" 
+-.TH INDENT 1L   
++.TH INDENT 1
+ .SH 名前
+ indent \- 空白の挿入や削除を行い、C 言語プログラムの見栄えを変える。
+ .SH 書式
+-- 
+1.8.3.2
+

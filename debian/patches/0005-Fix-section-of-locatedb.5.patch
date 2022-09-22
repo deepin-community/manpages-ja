@@ -1,0 +1,59 @@
+From ef98a08deedf3a10b53a2d564523b53112bc6ffe Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:57:12 +0900
+Subject: [PATCH 05/25] Fix section of locatedb.5
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_findutils/man5/locatedb.5 | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/manual/GNU_findutils/man5/locatedb.5 b/manual/GNU_findutils/man5/locatedb.5
+index 5aadbea..2cbfe43 100644
+--- a/manual/GNU_findutils/man5/locatedb.5
++++ b/manual/GNU_findutils/man5/locatedb.5
+@@ -22,7 +22,7 @@
+ .\"
+ .\"WORD		front compression		前置圧縮
+ .\"WORD		offset differential count	オフセット差分カウント
+-.TH LOCATEDB 5L \" -*- nroff -*-
++.TH LOCATEDB 5 \" -*- nroff -*-
+ .SH 名前
+ locatedb \- 前置圧縮されたファイル名データベース
+ .SH 説明
+@@ -36,7 +36,7 @@ locatedb \- 前置圧縮されたファイル名データベース
+ 環境変数やコマンドラインオプションを指定すれば、
+ ユーザーは \fBlocate\fP に検索させるデータベースを選択することができる。
+ 詳しくは
+-.BR locate (1L)
++.BR locate (1)
+ を見よ。
+ システム管理者はデフォルトで用いられるデータベースの名前や、
+ データベースの更新頻度、
+@@ -44,7 +44,7 @@ locatedb \- 前置圧縮されたファイル名データベース
+ 通常ファイル名データベースの更新は
+ \fBupdatedb\fP プログラムを定期的に実行させることによって行なう
+ (夜間が良いだろう)。詳細は
+-.BR updatedb (1L)
++.BR updatedb (1)
+ を見よ。
+ .PP
+ \fBupdatedb\fP は \fBfrcode\fP というプログラムを呼び出して
+@@ -160,10 +160,10 @@ bigram とは隣接した二つのバイトデータをインデックス付け
+ .fi
+ .RE
+ .SH 関連項目
+-.BR find (1L),
+-.BR locate (1L),
+-.BR updatedb (1L),
+-.BR xargs (1L)
++.BR find (1),
++.BR locate (1),
++.BR updatedb (1),
++.BR xargs (1)
+ .br
+ .B Finding Files
+ (on-line in Info, or printed)
+-- 
+1.8.3.2
+

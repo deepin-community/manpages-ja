@@ -1,0 +1,26 @@
+From c1005a85f883b222030fa945a1151be26a721988 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:58:38 +0900
+Subject: [PATCH 10/25] Fix section of false.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/false.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/false.1 b/manual/GNU_sh-utils/man1/false.1
+index 751df99..ce2e805 100644
+--- a/manual/GNU_sh-utils/man1/false.1
++++ b/manual/GNU_sh-utils/man1/false.1
+@@ -4,7 +4,7 @@
+ .\" Translated Sun Feb  9 15:21:02 JST 1997
+ .\"         by SHINDO Shuro <shu@linux.or.jp>
+ .\"
+-.TH FALSE 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH FALSE 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ false \- 無動作，異常終了
+ .SH 書式
+-- 
+1.8.3.2
+

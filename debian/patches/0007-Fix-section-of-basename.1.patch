@@ -1,0 +1,26 @@
+From c1c787cad88eec104ae3868e4c562350a9704a8f Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:57:56 +0900
+Subject: [PATCH 07/25] Fix section of basename.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/basename.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/basename.1 b/manual/GNU_sh-utils/man1/basename.1
+index 0a7f043..9eb8d26 100644
+--- a/manual/GNU_sh-utils/man1/basename.1
++++ b/manual/GNU_sh-utils/man1/basename.1
+@@ -2,7 +2,7 @@
+ .\"         all rights reserved.
+ .\" Dec 31, 1996   Tanoshima Hidetoshi <tano@sainet.or.jp> 
+ .\"
+-.TH BASENAME 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH BASENAME 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ basename \- ファイル名からディレクトリとサフィックスを取り除く。
+ .SH 書式
+-- 
+1.8.3.2
+

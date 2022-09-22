@@ -1,0 +1,26 @@
+From 82a4309bdb8aff7d30ef2b22713273d37a2e070f Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:25:52 +0900
+Subject: [PATCH 7/7] Fix section of ftl_format.8
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/pcmcia-cs/man8/ftl_format.8 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/pcmcia-cs/man8/ftl_format.8 b/manual/pcmcia-cs/man8/ftl_format.8
+index ddeeed7..a73dc20 100644
+--- a/manual/pcmcia-cs/man8/ftl_format.8
++++ b/manual/pcmcia-cs/man8/ftl_format.8
+@@ -6,7 +6,7 @@
+ .\" Updated Tue Oct 24 20:08:41 JST 2000
+ .\"	by Yuichi SATO <sato@complex.eng.hokudai.ac.jp>
+ .\"
+-.TH FTL_FORMAT 1 "2000/06/12 21:24:48" "pcmcia-cs"
++.TH FTL_FORMAT 8 "2000/06/12 21:24:48" "pcmcia-cs"
+ .SH 名前
+ ftl_format \- Flash Translation Layer フォーマットユーティリティ
+ .SH 書式
+-- 
+1.8.3.2
+

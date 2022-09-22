@@ -1,0 +1,26 @@
+From 7684f21fe9d3090fb67f52f8a66588de2dcef27a Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:59:34 +0900
+Subject: [PATCH 14/25] Fix section of who.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/who.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/who.1 b/manual/GNU_sh-utils/man1/who.1
+index 56aa37d..3f7e962 100644
+--- a/manual/GNU_sh-utils/man1/who.1
++++ b/manual/GNU_sh-utils/man1/who.1
+@@ -20,7 +20,7 @@
+ .\"         all rights reserved.
+ .\" Translated Thu May 29 17:37:16 JST 1997
+ .\"         by KAWABATA Takahiro
+-.TH WHO 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH WHO 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ who \- 現在ログインしているユーザを表示する
+ .SH 書式
+-- 
+1.8.3.2
+

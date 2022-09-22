@@ -1,0 +1,26 @@
+From 0e38a06a823788be0d39dfe2801592533d148da3 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:59:17 +0900
+Subject: [PATCH 12/25] Fix section of logname.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/logname.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/logname.1 b/manual/GNU_sh-utils/man1/logname.1
+index 27ab072..39ef049 100644
+--- a/manual/GNU_sh-utils/man1/logname.1
++++ b/manual/GNU_sh-utils/man1/logname.1
+@@ -20,7 +20,7 @@
+ .\"         all rights reserved.
+ .\" Translated Sun Jun 22 10:04:17 JST 1997
+ .\"         by CHIDA Kazunori <chida@mondo.mech.muroran-it.ac.jp>  
+-.TH LOGNAME 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH LOGNAME 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ logname \- ユーザのログイン名を出力する。
+ .SH 書式
+-- 
+1.8.3.2
+

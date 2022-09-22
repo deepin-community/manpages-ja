@@ -1,0 +1,26 @@
+From 6dac1318e45f4295bb7a2f3f1ab22376b3c73636 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:00:13 +0900
+Subject: [PATCH 16/25] Fix section of nohup.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/nohup.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/nohup.1 b/manual/GNU_sh-utils/man1/nohup.1
+index 65eab25..2f7e5a0 100644
+--- a/manual/GNU_sh-utils/man1/nohup.1
++++ b/manual/GNU_sh-utils/man1/nohup.1
+@@ -3,7 +3,7 @@
+ .\"         all rights reserved.
+ .\" Translated Mon Feb 10 19:56:44 JST 1997
+ .\"         by Atsushi KAMOSHIDA <kamop@tsuki.elect.chuo-u.ac.jp>
+-.TH NOHUP 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH NOHUP 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ nohup \- ハングアップ信号に影響されずにコマンドを実行し、ttyに出力しない
+ .SH 書式
+-- 
+1.8.3.2
+

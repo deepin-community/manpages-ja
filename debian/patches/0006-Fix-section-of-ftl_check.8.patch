@@ -1,0 +1,26 @@
+From f65be225da6dae2dd660566dd1441443d17580d1 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:24:44 +0900
+Subject: [PATCH 6/7] Fix section of ftl_check.8
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/pcmcia-cs/man8/ftl_check.8 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/pcmcia-cs/man8/ftl_check.8 b/manual/pcmcia-cs/man8/ftl_check.8
+index a36401b..f54175a 100644
+--- a/manual/pcmcia-cs/man8/ftl_check.8
++++ b/manual/pcmcia-cs/man8/ftl_check.8
+@@ -6,7 +6,7 @@
+ .\" Updated Tue Oct 24 20:08:41 JST 2000
+ .\"	by Yuichi SATO <sato@complex.eng.hokudai.ac.jp>
+ .\"
+-.TH FTL_CHECK 1 "2000/06/12 21:24:48" "pcmcia-cs"
++.TH FTL_CHECK 8 "2000/06/12 21:24:48" "pcmcia-cs"
+ .SH 名前
+ ftl_check \- Flash Translation Layer フォーマットチェッカ
+ .SH 書式
+-- 
+1.8.3.2
+

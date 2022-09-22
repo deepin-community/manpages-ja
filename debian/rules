@@ -1,0 +1,72 @@
+#!/usr/bin/make -f
+
+PKD   = $(abspath $(dir $(MAKEFILE_LIST)))
+PKG   = $(word 2,$(shell dpkg-parsechangelog -l$(PKD)/changelog | grep ^Source))
+UVER  = $(shell dpkg-parsechangelog -l$(PKD)/changelog | perl -ne 'print $$1 if m{^Version:\s+(?:\d+:)?(\d.*)(?:\-\d+.*)};')
+DTYPE = +dfsg
+VER  ?= $(subst $(DTYPE),,$(UVER))
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	( echo \$$DESTDIR/usr/share/man/ja; echo 0; echo; echo; echo y; yes c ) | $(MAKE) config
+
+override_dh_auto_install:
+	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
+	# newgrp(1) should not be derived from util-linux, but from shadow, while overlapped with login package
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man1/newgrp.1
+	# su(1) should be derived from util-linux since buster, not its original ancient version
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man1/su.1
+	# These manpages should not be derived from util-linux, but from shadow, while overlapped with passwd package
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man1/chfn.1
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man1/chsh.1
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man8/vigr.8
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man8/vipw.8
+	# passwd(5) should not be derived from LDP, but from shadow, while overlapped with passwd package
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man5/passwd.5
+	# cal(1) should be derived from bsdmainutils, not from util-linux
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man1/cal.1
+	# rename(1) should not be derived from util-linux (see #439935)
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man1/rename.1
+	# overlapping manpages in dhcp3-common package
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man5/dhclient.conf.5
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man5/dhclient.leases.5
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man5/dhcp-options.5
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man5/dhcp-eval.5
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man8/dhclient-script.8
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man8/dhclient.8
+	# Install the translated pages as Japanese version
+	# since jless-specific description is removed from them.
+	install debian/jless.1 $(CURDIR)/debian/tmp/usr/share/man/ja/man1
+	install debian/jlesskey.1 $(CURDIR)/debian/tmp/usr/share/man/ja/man1
+	# GNU thinks chroot is in bin, Debian thinks it is in sbin; mimic coreutils package
+	sed 's/"1"/"8"/' $(CURDIR)/debian/tmp/usr/share/man/ja/man1/chroot.1 > $(CURDIR)/debian/tmp/usr/share/man/ja/man8/chroot.8
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man1/chroot.1
+	# Move tcpdump(1) to tcpdump(8).
+	mv $(CURDIR)/debian/tmp/usr/share/man/ja/man1/tcpdump.1 $(CURDIR)/debian/tmp/usr/share/man/ja/man8/tcpdump.8
+	# glibc doesn't implement setproctitle(3).
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man3/setproctitle.3
+	# gasp is no longer available
+	rm -f $(CURDIR)/debian/tmp/usr/share/man/ja/man1/gasp.1
+
+get-orig-source: $(PKG)_$(VER)$(DTYPE).orig.tar.xz $(info I: $(PKG)_$(VER)$(DTYPE))
+	@
+
+$(PKG)_$(VER)$(DTYPE).orig.tar.xz:
+	@echo "# Downloading..."
+	uscan --noconf --verbose --rename --destdir=$(CURDIR) --check-dirname-level=0 --force-download --download-version $(VER) $(PKD)
+	$(if $(wildcard $(PKG)-$(VER)),$(error $(PKG)-$(VER) exist, aborting..))
+	@echo "# Extracting..."
+	mkdir $(PKG)-$(VER) \
+		&& tar -xf $(PKG)_$(VER).orig.tar.* --directory $(PKG)-$(VER) --strip-components 1 \
+		|| $(RM) -r $(PKG)-$(VER)
+	@echo "# Cleaning-up..."
+	cd $(PKG)-$(VER) \
+		&& $(RM) -r -v \
+		manual/procps/man1/top.1 manual/LDP_man-pages/man7/uri.7
+	#$(RM) -v $(PKG)_$(VER).orig.tar.*
+	@echo "# Packing..."
+	find -L "$(PKG)-$(VER)" -xdev -type f -print | sort \
+		| XZ_OPT="-6v" tar -caf "$(PKG)_$(VER)$(DTYPE).orig.tar.xz" -T- --owner=root --group=root --mode=a+rX \
+		&& $(RM) -r "$(PKG)-$(VER)"

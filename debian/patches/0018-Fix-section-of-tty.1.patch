@@ -1,0 +1,26 @@
+From 1f54c3305ddaf2c0124179d61152a4eb6da4d9f7 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:00:29 +0900
+Subject: [PATCH 18/25] Fix section of tty.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/tty.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/tty.1 b/manual/GNU_sh-utils/man1/tty.1
+index 7cea49c..119444c 100644
+--- a/manual/GNU_sh-utils/man1/tty.1
++++ b/manual/GNU_sh-utils/man1/tty.1
+@@ -21,7 +21,7 @@
+ .\" Translated Sun Jun 22 10:04:17 JST 1997
+ .\"         by CHIDA Kazunori <chida@mondo.mech.muroran-it.ac.jp>  
+ .\"WORD: exit status 戻りステータス
+-.TH TTY 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH TTY 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ tty \- 標準入力に接続されている端末のファイル名の出力
+ .SH 書式
+-- 
+1.8.3.2
+

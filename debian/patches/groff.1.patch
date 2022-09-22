@@ -1,0 +1,37 @@
+From 35dd0a0e33ea23dfe447d80fea4b86a62adb91ac Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Mon, 8 Jul 2013 07:58:07 +0900
+Subject: [PATCH 5/9] Update groff.1 for debian
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_groff/man1/groff.1 |    9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/manual/GNU_groff/man1/groff.1 b/manual/GNU_groff/man1/groff.1
+index c1c8ac4..f9ff966 100644
+--- a/manual/GNU_groff/man1/groff.1
++++ b/manual/GNU_groff/man1/groff.1
+@@ -89,13 +89,16 @@ TeX の dvi フォーマット。
+ .B ascii
+ タイプライタに似た特性を持つデバイス。
+ .TP
++.B ascii8
++タイプライタに似た特性を持つデバイス。
++.BR ascii 
++とは異なり、このデバイスは 8 ビットクリーンです。このデバイスは 
++ASCII や ISO-8859-1 以外の文字集合での使用を想定しています。
++.TP
+ .B latin1
+ ISO Latin-1 (ISO 8859-1) 文字集合を利用する
+ タイプライタに似た特性を持つデバイス。
+ .TP
+-.B koi8-r
+-ロシア語 KOI8-R 文字集合を利用するタイプライタに似た特性を持つデバイス。
+-.TP
+ .B utf8
+ UTF-8 エンコーディングの Unicode (ISO 10646) 文字集合を利用する
+ タイプライタに似た特性を持つデバイス。
+-- 
+1.7.10.4
+

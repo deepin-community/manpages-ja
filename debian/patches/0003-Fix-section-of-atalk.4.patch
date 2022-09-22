@@ -1,0 +1,26 @@
+From 2a0b90c430b4eec16a654e7bfce8e0c0c0271f06 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:19:50 +0900
+Subject: [PATCH 3/7] Fix section of atalk.4
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/netatalk/man4/atalk.4 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/netatalk/man4/atalk.4 b/manual/netatalk/man4/atalk.4
+index 6b00a85..ebb3520 100644
+--- a/manual/netatalk/man4/atalk.4
++++ b/manual/netatalk/man4/atalk.4
+@@ -4,7 +4,7 @@
+ .\" Translated Sat Mar 10 00:45:37 JST 2001
+ .\"         by Yuichi SATO <sato@complex.eng.hokudai.ac.jp>
+ .\"
+-.TH ATALK 4F "17 Dec 1991" "netatalk 1.2"
++.TH ATALK 4 "17 Dec 1991" "netatalk 1.2"
+ .SH 名前
+ atalk \- AppleTalk プロトコルファミリー
+ .SH 書式
+-- 
+1.8.3.2
+

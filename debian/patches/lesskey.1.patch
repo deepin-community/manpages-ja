@@ -1,0 +1,36 @@
+From e7f4c718d9cb96860b0d0e0c95ddc3c674fe119e Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Mon, 8 Jul 2013 07:58:41 +0900
+Subject: [PATCH 7/9] Update lesskey.1 for debian
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_less/man1/lesskey.1 |   15 ---------------
+ 1 file changed, 15 deletions(-)
+
+diff --git a/manual/GNU_less/man1/lesskey.1 b/manual/GNU_less/man1/lesskey.1
+index 8c2f65c..fb565dd 100644
+--- a/manual/GNU_less/man1/lesskey.1
++++ b/manual/GNU_less/man1/lesskey.1
+@@ -399,18 +399,3 @@ Suite 330, Boston, MA  02111-1307, USA.
+ Mark Nudelman <marknu@flash.net>
+ .br
+ バグの報告やコメントは、上のアドレスか bug-less@gnu.org へ送って下さい。
+-
+-.SH パッチ
+-Copyright (c) 1994-2000  Kazushi (Jam) Marukawa, Japanized routines only
+-.br
+-Comments to: jam@pobox.com
+-.br
+-You may distribute under the terms of the Less License.
+-.PP
+-[参考訳]
+-.br
+-Copyright (c) 1994-2000  Kazushi (Jam) Marukawa, 日本語化ルーチンのみ。
+-.br
+-コメントは jam@pobox.com へ送って下さい。
+-.br
+-このパッチは Less ライセンスの下で配布できる。
+-- 
+1.7.10.4
+

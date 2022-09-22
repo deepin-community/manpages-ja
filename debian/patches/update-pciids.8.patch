@@ -1,0 +1,26 @@
+From ada39289b8b01c62b576c856f9ebd8e0476bd92c Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Mon, 8 Jul 2013 08:00:28 +0900
+Subject: [PATCH 9/9] Update update-pciids.8 for debian
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/pciutils/man8/update-pciids.8 |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/pciutils/man8/update-pciids.8 b/manual/pciutils/man8/update-pciids.8
+index 4f7d47f..a1b817f 100644
+--- a/manual/pciutils/man8/update-pciids.8
++++ b/manual/pciutils/man8/update-pciids.8
+@@ -26,7 +26,7 @@ update\-pciids \- PCI ID リストの新しいバージョンをダウンロー
+ 
+ .SH ファイル
+ .TP 
+-\fB/usr/share/pci.ids\fP
++\fB/usr/share/misc/pci.ids\fP
+ ここに新しいリストをインストールする。
+ 
+ .SH 関連項目
+-- 
+1.7.10.4
+

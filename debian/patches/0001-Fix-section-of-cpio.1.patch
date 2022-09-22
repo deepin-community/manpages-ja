@@ -1,0 +1,26 @@
+From d15108e8f54414b02178d7d41b03066579077fe7 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:48:09 +0900
+Subject: [PATCH 01/25] Fix section of cpio.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_cpio/man1/cpio.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_cpio/man1/cpio.1 b/manual/GNU_cpio/man1/cpio.1
+index 2100f04..bbca673 100644
+--- a/manual/GNU_cpio/man1/cpio.1
++++ b/manual/GNU_cpio/man1/cpio.1
+@@ -10,7 +10,7 @@
+ .\"   by NetBSD jman Project, 1998-02-18.
+ .\" Update 2012-06-02, Akihiro MOTOKI <amotoki@gmail.com>
+ .\"
+-.TH CPIO 1L   
++.TH CPIO 1
+ .SH 名前
+ cpio \- アーカイブファイルへのファイルのコピーや、アーカイブファイルからファイルへのコピーを行う
+ .SH 書式
+-- 
+1.8.3.2
+

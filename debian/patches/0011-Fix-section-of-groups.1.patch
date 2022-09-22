@@ -1,0 +1,26 @@
+From ff959f1dccac2bd497cd59ffb9537d1ad0bb8a7d Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:59:06 +0900
+Subject: [PATCH 11/25] Fix section of groups.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/groups.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/groups.1 b/manual/GNU_sh-utils/man1/groups.1
+index 6cf7caa..5fa0376 100644
+--- a/manual/GNU_sh-utils/man1/groups.1
++++ b/manual/GNU_sh-utils/man1/groups.1
+@@ -3,7 +3,7 @@
+ .\"         all rights reserved.
+ .\" Translated Mon Feb 10 19:56:44 JST 1997
+ .\"         by Atsushi KAMOSHIDA <kamop@tsuki.elect.chuo-u.ac.jp>
+-.TH GROUPS 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH GROUPS 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ groups \- ユーザーが属しているグループの表示
+ .SH 書式
+-- 
+1.8.3.2
+

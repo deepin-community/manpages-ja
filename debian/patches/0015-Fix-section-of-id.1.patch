@@ -1,0 +1,26 @@
+From 5c40b0c23bd05bac1911b34aa407bdb9eee1c8c0 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 17:59:44 +0900
+Subject: [PATCH 15/25] Fix section of id.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/id.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/id.1 b/manual/GNU_sh-utils/man1/id.1
+index 5e50176..e3fff5e 100644
+--- a/manual/GNU_sh-utils/man1/id.1
++++ b/manual/GNU_sh-utils/man1/id.1
+@@ -3,7 +3,7 @@
+ .\"         all rights reserved.
+ .\" Translated Mon Feb 10 19:56:44 JST 1997
+ .\"         by Atsushi KAMOSHIDA <kamop@tsuki.elect.chuo-u.ac.jp>
+-.TH ID 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH ID 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ id \- UID と GID を表示
+ .SH 書式
+-- 
+1.8.3.2
+

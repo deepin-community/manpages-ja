@@ -1,0 +1,26 @@
+From a84809a86d25daba14fa829e02b81b048b2a8127 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:22:18 +0900
+Subject: [PATCH 4/7] Fix section of tcpdump.1 to 8
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/tcpdump/man1/tcpdump.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/tcpdump/man1/tcpdump.1 b/manual/tcpdump/man1/tcpdump.1
+index 98e5e3e..85e9ed9 100644
+--- a/manual/tcpdump/man1/tcpdump.1
++++ b/manual/tcpdump/man1/tcpdump.1
+@@ -32,7 +32,7 @@
+ .\" Updated Fri Sep 11 00:55:00 JST 2000
+ .\"	by  Kentaro Shirakata <argrath@ub32.org>
+ .\"
+-.TH TCPDUMP 1  "30 June 1997"
++.TH TCPDUMP 8  "30 June 1997"
+ .SH 名前
+ tcpdump \- ネットワークのトラフィックをダンプする
+ .SH 書式
+-- 
+1.8.3.2
+

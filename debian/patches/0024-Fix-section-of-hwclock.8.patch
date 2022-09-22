@@ -1,0 +1,26 @@
+From ce01f8e7eb12d059e6e6c30588de931997a02695 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:02:15 +0900
+Subject: [PATCH 24/25] Fix section of hwclock.8
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/util-linux/man8/hwclock.8 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/util-linux/man8/hwclock.8 b/manual/util-linux/man8/hwclock.8
+index f5bc8a0..402cf06 100644
+--- a/manual/util-linux/man8/hwclock.8
++++ b/manual/util-linux/man8/hwclock.8
+@@ -364,7 +364,7 @@ ISA システムの設計対象であった DOS においては、
+ .PP
+ システム・クロックには不連続が存在してはならない。
+ これはシステムが走っている間に
+-.I date(1L)
++.I date(1)
+ プログラムを実行して時計を合わせるような場合でも同様である。
+ 一方ハードウェア・クロックには、システムの実行中にでも何を行ってもよい。
+ 次回 Linux が起動したときに、
+-- 
+1.8.3.2
+

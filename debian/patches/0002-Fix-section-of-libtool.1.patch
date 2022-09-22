@@ -1,0 +1,26 @@
+From 38a6865262fa37c9a7359477310b18fb16b3ad3c Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:19:11 +0900
+Subject: [PATCH 2/7] Fix section of libtool.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/gnumaniak/man1/libtool.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/gnumaniak/man1/libtool.1 b/manual/gnumaniak/man1/libtool.1
+index 830c480..951c9f5 100644
+--- a/manual/gnumaniak/man1/libtool.1
++++ b/manual/gnumaniak/man1/libtool.1
+@@ -32,7 +32,7 @@
+ .\"WORD:	static			静的
+ .\"WORD:	partial linking		部分リンク
+ .\"
+-.TH LIBTOOL 301 "June 2002" "libtool 1.4.2"
++.TH LIBTOOL 1 "June 2002" "libtool 1.4.2"
+ .SH 名前
+ \fBlibtool\fR \- ライブラリのコンパイル・ビルド・
+ インストール・アンインストールをする
+-- 
+1.8.3.2
+

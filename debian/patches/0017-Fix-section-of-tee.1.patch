@@ -1,0 +1,26 @@
+From a428e725582544d824905b070bc1c55d0ddfb80d Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:00:21 +0900
+Subject: [PATCH 17/25] Fix section of tee.1
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/GNU_sh-utils/man1/tee.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/GNU_sh-utils/man1/tee.1 b/manual/GNU_sh-utils/man1/tee.1
+index f26d026..6652212 100644
+--- a/manual/GNU_sh-utils/man1/tee.1
++++ b/manual/GNU_sh-utils/man1/tee.1
+@@ -22,7 +22,7 @@
+ .\" Translated Sun Jun 22 10:04:17 JST 1997
+ .\"         by CHIDA Kazunori <chida@mondo.mech.muroran-it.ac.jp>  
+ .\"WORD:	interrupt signals   割り込みシグナル
+-.TH TEE 1L "GNU Shell Utilities" "FSF" \" -*- nroff -*-
++.TH TEE 1 "GNU Shell Utilities" "FSF" \" -*- nroff -*-
+ .SH 名前
+ tee \- 標準入力から読みとり、標準出力とファイルに書き出す
+ .SH 書式
+-- 
+1.8.3.2
+

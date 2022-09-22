@@ -1,0 +1,22 @@
+diff --git a/manual/util-linux/man8/hwclock.8 b/manual/util-linux/man8/hwclock.8
+index f5bc8a0..d3ad750 100644
+--- a/manual/util-linux/man8/hwclock.8
++++ b/manual/util-linux/man8/hwclock.8
+@@ -79,7 +79,7 @@ DEC Alpha 用の知る人ぞ知るオプション:
+ オプションによって指定した時刻に設定する。
+ .TP
+ .B \-\-hctosys
+-システム・クロックをハードウェア・クロックに合わせる。
++ハードウェア・クロックでシステム・クロックを合わせる。
+ 
+ 同時にカーネルが持つタイムゾーンの値も
+ ローカルのタイムゾーンにセットする。
+@@ -97,7 +97,7 @@ tz_dsttime は DST_NONE に設定される。
+ このオプションはシステムの起動スクリプトの一部で用いるとよい。
+ .TP
+ .B \-\-systohc
+-ハードウェア・クロックを現在のシステム・クロックに合わせる。
++現在のシステム・クロックでハードウェア・クロックを合わせる。
+ .TP
+ .B \-\-adjust
+ 最後にハードウェア・クロックを合わせた時点からの経過時間に対して生じる、

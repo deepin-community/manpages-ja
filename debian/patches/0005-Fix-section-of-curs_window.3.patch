@@ -1,0 +1,26 @@
+From 68470cb7b476c1939ba2b71e30eb37757cbae2a0 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 4 Aug 2013 18:23:22 +0900
+Subject: [PATCH 5/7] Fix section of curs_window.3
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ manual/ncurses/man3/curs_window.3 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/manual/ncurses/man3/curs_window.3 b/manual/ncurses/man3/curs_window.3
+index fdeb003..657715a 100644
+--- a/manual/ncurses/man3/curs_window.3
++++ b/manual/ncurses/man3/curs_window.3
+@@ -30,7 +30,7 @@
+ .\" Japanese Version Copyright (c) 2002 HAYASHI Kentaro
+ .\"         all rights reserved.
+ .\"
+-.TH curs_window 3X ""
++.TH curs_window 3 ""
+ .SH 名前
+ \fBnewwin\fR, \fBdelwin\fR, \fBmvwin\fR, \fBsubwin\fR, \fBderwin\fR,
+ \fBmvderwin\fR, \fBdupwin\fR, \fBwsyncup\fR, \fBsyncok\fR, \fBwcursyncup\fR,
+-- 
+1.8.3.2
+
